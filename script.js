@@ -6,7 +6,7 @@ const products = [
         farmer: "Green Valley Farm",
         price: 4.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1592841200221-c55457352e27?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1582284540020-8acbe03f4924?w=400&fit=crop",
         description: "Fresh organic tomatoes, hand-picked daily",
         stock: 50
     },
@@ -16,7 +16,7 @@ const products = [
         farmer: "Sunny Acres Farm",
         price: 2.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1528054315887-469083706924?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1551754439-42460b6c3c5b?w=400&fit=crop",
         description: "Sweet and juicy corn, picked at peak freshness",
         stock: 30
     },
@@ -26,7 +26,7 @@ const products = [
         farmer: "Green Valley Farm",
         price: 3.49,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1550411291-d285362c0131?w=400&fit=crop",
         description: "Crisp and fresh lettuce from our hydroponic farm",
         stock: 40
     },
@@ -36,7 +36,7 @@ const products = [
         farmer: "Mountain View Organics",
         price: 5.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1599540030248-b9972551be8c?w=400&fit=crop",
         description: "Organic red bell peppers, sweet and crunchy",
         stock: 25
     },
@@ -46,7 +46,7 @@ const products = [
         farmer: "Berry Hill Farm",
         price: 6.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1588617501088-c67637803e36?w=400&fit=crop",
         description: "Sweet organic strawberries, perfect for desserts",
         stock: 20
     },
@@ -56,7 +56,7 @@ const products = [
         farmer: "Orchard Valley",
         price: 3.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1560806887-1e4cd0b69665?w=400&fit=crop",
         description: "Crisp and delicious apples from our orchard",
         stock: 60
     },
@@ -66,7 +66,7 @@ const products = [
         farmer: "Berry Hill Farm",
         price: 7.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1589391886610-c6a053578794?w=400&fit=crop",
         description: "Premium organic blueberries, antioxidant-rich",
         stock: 15
     },
@@ -76,7 +76,7 @@ const products = [
         farmer: "Citrus Grove Farm",
         price: 4.49,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&fit=crop",
         description: "Juicy oranges, rich in vitamin C",
         stock: 45
     },
@@ -86,7 +86,7 @@ const products = [
         farmer: "Dairy Delights",
         price: 5.99,
         category: "dairy",
-        image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1620189507195-68309c00c486?w=400&fit=crop",
         description: "Fresh milk from grass-fed cows",
         stock: 35
     },
@@ -96,7 +96,7 @@ const products = [
         farmer: "Dairy Delights",
         price: 8.99,
         category: "dairy",
-        image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1618164436241-d8a2135d513a?w=400&fit=crop",
         description: "Artisanal organic cheese, aged to perfection",
         stock: 25
     },
@@ -106,7 +106,7 @@ const products = [
         farmer: "Grain Valley",
         price: 9.99,
         category: "grains",
-        image: "https://images.unsplash.com/photo-1541014741257-de529411b96a?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1559200408-e2b31f7a4073?w=400&fit=crop",
         description: "Protein-rich organic quinoa",
         stock: 30
     },
@@ -116,7 +116,7 @@ const products = [
         farmer: "Grain Valley",
         price: 4.99,
         category: "grains",
-        image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=400&fit=crop",
         description: "Whole grain organic brown rice",
         stock: 40
     },
@@ -126,7 +126,7 @@ const products = [
         farmer: "Meadow Ridge Ranch",
         price: 14.99,
         category: "meat",
-        image: "https://images.unsplash.com/photo-1612872488244-513897d6d35a?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1603048255566-13a8f273663c?w=400&fit=crop",
         description: "Premium grass-fed beef",
         stock: 20
     },
@@ -136,7 +136,7 @@ const products = [
         farmer: "Pasture Poultry",
         price: 12.99,
         category: "meat",
-        image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1611718422203-b1d7d088a3f8?w=400&fit=crop",
         description: "Organic free-range chicken",
         stock: 15
     },
@@ -146,7 +146,7 @@ const products = [
         farmer: "Happy Hen Farm",
         price: 5.99,
         category: "eggs",
-        image: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1598965675069-4d06c1031d45?w=400&fit=crop",
         description: "Fresh eggs from free-range hens",
         stock: 50
     },
@@ -156,7 +156,7 @@ const products = [
         farmer: "Green Valley Farm",
         price: 3.49,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1604977049387-53c8e81082b9?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?w=400&fit=crop",
         description: "Crisp organic cucumbers, perfect for salads",
         stock: 35
     },
@@ -166,7 +166,7 @@ const products = [
         farmer: "Root Garden Farm",
         price: 2.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1582515073400-0528539da135?w=400&fit=crop",
         description: "Fresh sweet carrots, perfect for snacking",
         stock: 40
     },
@@ -176,7 +176,7 @@ const products = [
         farmer: "Green Valley Farm",
         price: 4.49,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1628773822503-63c9c43b006d?w=400&fit=crop",
         description: "Crisp organic broccoli heads",
         stock: 30
     },
@@ -186,7 +186,7 @@ const products = [
         farmer: "Root Garden Farm",
         price: 3.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1598136384073-3b7f6174b744?w=400&fit=crop",
         description: "Fresh russet potatoes",
         stock: 50
     },
@@ -196,7 +196,7 @@ const products = [
         farmer: "Sunny Acres Farm",
         price: 2.49,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1618512496249-4b21c90be3bf?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1580252431227-4a4386906518?w=400&fit=crop",
         description: "Yellow cooking onions",
         stock: 45
     },
@@ -206,7 +206,7 @@ const products = [
         farmer: "Leafy Greens Co",
         price: 3.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1584823233633-9b09939a24d2?w=400&fit=crop",
         description: "Fresh leafy spinach",
         stock: 35
     },
@@ -216,7 +216,7 @@ const products = [
         farmer: "Citrus Grove Farm",
         price: 5.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1601039641847-7857b994d704?w=400&fit=crop",
         description: "Ripe Hass avocados",
         stock: 25
     },
@@ -226,7 +226,7 @@ const products = [
         farmer: "Tropical Farms",
         price: 2.49,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400&fit=crop",
         description: "Fresh organic bananas",
         stock: 55
     },
@@ -236,7 +236,7 @@ const products = [
         farmer: "Vineyard Fresh",
         price: 6.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1592919505780-303950717480?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1537640538966-79f369141f3f?w=400&fit=crop",
         description: "Sweet red seedless grapes",
         stock: 30
     },
@@ -246,7 +246,7 @@ const products = [
         farmer: "Tropical Farms",
         price: 5.49,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1587883138340-e14f8c523b08?w=400&fit=crop",
         description: "Fresh sweet pineapple",
         stock: 20
     },
@@ -256,7 +256,7 @@ const products = [
         farmer: "Sunny Acres Farm",
         price: 8.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1621414218889-c4971360010f?w=400&fit=crop",
         description: "Juicy sweet watermelon",
         stock: 15
     },
@@ -266,7 +266,7 @@ const products = [
         farmer: "Tropical Farms",
         price: 4.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1605027990121-3e61b026c0c9?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1605027806543-2c133b6d911a?w=400&fit=crop",
         description: "Ripe sweet mangoes",
         stock: 30
     },
@@ -276,7 +276,7 @@ const products = [
         farmer: "Dairy Delights",
         price: 6.49,
         category: "dairy",
-        image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1562119426-80f23f913d09?w=400&fit=crop",
         description: "Creamy organic Greek yogurt",
         stock: 30
     },
@@ -286,7 +286,7 @@ const products = [
         farmer: "Dairy Delights",
         price: 7.99,
         category: "dairy",
-        image: "https://images.unsplash.com/photo-1549909158-939c7cc8e7b3?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1589923188902-c2c34c1c4f48?w=400&fit=crop",
         description: "Farm fresh creamy butter",
         stock: 25
     },
@@ -296,7 +296,7 @@ const products = [
         farmer: "Grain Valley",
         price: 5.99,
         category: "grains",
-        image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1533013832391-6e3e506e8b23?w=400&fit=crop",
         description: "Whole grain organic oats",
         stock: 35
     },
@@ -306,7 +306,7 @@ const products = [
         farmer: "Grain Valley",
         price: 4.49,
         category: "grains",
-        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1627485895444-f25bbf32f058?w=400&fit=crop",
         description: "Stone-ground whole wheat flour",
         stock: 40
     },
@@ -316,7 +316,7 @@ const products = [
         farmer: "Grain Valley",
         price: 6.99,
         category: "grains",
-        image: "https://images.unsplash.com/photo-1590247813693-55499e8ffbfa?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1516365453673-f394f10c5a1a?w=400&fit=crop",
         description: "Organic hulled barley",
         stock: 30
     },
@@ -326,7 +326,7 @@ const products = [
         farmer: "Meadow Ridge Ranch",
         price: 11.99,
         category: "meat",
-        image: "https://images.unsplash.com/photo-1518032134401-4b9f7f7dc9c1?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1606843043444-c8b35fd0f5f0?w=400&fit=crop",
         description: "Thick-cut pork chops",
         stock: 20
     },
@@ -336,7 +336,7 @@ const products = [
         farmer: "Pasture Poultry",
         price: 8.99,
         category: "meat",
-        image: "https://images.unsplash.com/photo-1543946207-39bd91e70ca7?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1543669527-1e5f80b06a58?w=400&fit=crop",
         description: "Lean ground turkey",
         stock: 25
     },
@@ -346,7 +346,7 @@ const products = [
         farmer: "Meadow Ridge Ranch",
         price: 16.99,
         category: "meat",
-        image: "https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1598511757341-c71b5501c0c6?w=400&fit=crop",
         description: "Premium lamb chops",
         stock: 15
     },
@@ -356,7 +356,7 @@ const products = [
         farmer: "Happy Hen Farm",
         price: 8.99,
         category: "eggs",
-        image: "https://images.unsplash.com/photo-1518568406858-e6da5417c0dc?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1627725911414-3d6118d09d3b?w=400&fit=crop",
         description: "Large duck eggs from free-range ducks",
         stock: 20
     },
@@ -366,7 +366,7 @@ const products = [
         farmer: "Green Valley Farm",
         price: 2.99,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1510030548086-c65ab47b7e41?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1524383432336-c3f6115c3f38?w=400&fit=crop",
         description: "Fresh summer zucchini",
         stock: 40
     },
@@ -376,7 +376,7 @@ const products = [
         farmer: "Green Valley Farm",
         price: 4.49,
         category: "vegetables",
-        image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1589311022416-03f10660f782?w=400&fit=crop",
         description: "Crisp fresh green beans",
         stock: 35
     },
@@ -386,7 +386,7 @@ const products = [
         farmer: "Orchard Valley",
         price: 4.99,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1578043468841-4eb61ff9a838?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1616662496111-c3a5f86af165?w=400&fit=crop",
         description: "Juicy ripe pears",
         stock: 40
     },
@@ -396,7 +396,7 @@ const products = [
         farmer: "Orchard Valley",
         price: 5.49,
         category: "fruits",
-        image: "https://images.unsplash.com/photo-1558191053-4a1a86be6993?w=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1600658706973-cabc3e5c9a75?w=400&fit=crop",
         description: "Sweet fresh peaches",
         stock: 30
     }
@@ -738,4 +738,3 @@ function showNotification(message) {
         setTimeout(() => notification.remove(), 300);
     }, 3000);
 }
-
