@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - Farm2Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .dashboard-header h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .seller-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .seller-info span {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+        .dashboard-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .dashboard-tabs button {
+            background: none;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .dashboard-tabs button.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: -2px;
+        }
+        .dashboard-content {
+            display: none;
+        }
+        .dashboard-content.active {
+            display: block;
+        }
+        .product-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        .product-form h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .stat-card .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        .stat-card .stat-label {
+            color: var(--text-light);
+        }
+        .seller-products {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .seller-product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        .seller-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .seller-product-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .seller-product-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .seller-product-info p {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        .seller-product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+        .seller-product-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .btn-edit {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .btn-delete {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .btn-edit:hover {
+            background: var(--primary-color);
+        }
+        .btn-delete:hover {
+            background: #c0392b;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-light);
+        }
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>👨‍🌾 Seller Dashboard</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Marketplace</a></li>
+                <li><a href="#" class="btn-logout" style="cursor: pointer;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1 id="seller-name">Seller Dashboard</h1>
+            <div class="seller-info">
+                <span id="seller-email">Loading...</span>
+                <span id="seller-farm-type">Farmer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Tabs -->
+    <section class="container">
+        <div class="dashboard-tabs">
+            <button class="active" onclick="switchDashboardTab('products')">My Products</button>
+            <button onclick="switchDashboardTab('add')">Add New Product</button>
+            <button onclick="switchDashboardTab('stats')">Statistics</button>
+        </div>
+
+        <!-- My Products Tab -->
+        <div class="dashboard-content active" id="products-tab">
+            <h2 style="margin-bottom: 1.5rem;">Your Products</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-products">0</div>
+                    <div class="stat-label">Total Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="total-value">$0</div>
+                    <div class="stat-label">Total Inventory Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="avg-price">$0</div>
+                    <div class="stat-label">Average Price</div>
+                </div>
+            </div>
+            <div class="seller-products" id="seller-products-list">
+                <!-- Products will be loaded here -->
+            </div>
+            <div class="empty-state" id="no-products" style="display: none;">
+                <div class="empty-state-icon">📦</div>
+                <h3>No products yet</h3>
+                <p>Add your first product to start selling!</p>
+            </div>
+        </div>
+
+        <!-- Add Product Tab -->
+        <div class="dashboard-content" id="add-tab">
+            <div class="product-form">
+                <h2>Add New Product</h2>
+                <form id="add-product-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-name">Product Name *</label>
+                            <input type="text" id="product-name" required placeholder="e.g., Organic Tomatoes">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-category">Category *</label>
+                            <select id="product-category" required>
+                                <option value="">Select category</option>
+                                <option value="vegetables">Vegetables</option>
+                                <option value="fruits">Fruits</option>
+                                <option value="dairy">Dairy</option>
+                                <option value="grains">Grains & Cereals</option>
+                                <option value="meat">Meat & Poultry</option>
+                                <option value="eggs">Eggs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-price">Price ($) *</label>
+                            <input type="number" id="product-price" step="0.01" min="0" required placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-stock">Stock Quantity *</label>
+                            <input type="number" id="product-stock" min="0" required placeholder="0">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-image">Product Image URL</label>
+                            <input type="url" id="product-image" placeholder="https://images.unsplash.com/...">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-farmer">Farm Name</label>
+                            <input type="text" id="product-farmer">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description *</label>
+                        <textarea id="product-description" required placeholder="Describe your product..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Statistics Tab -->
+        <div class="dashboard-content" id="stats-tab">
+            <h2>Your Dashboard Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-total">0</div>
+                    <div class="stat-label">Total Products Listed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-inventory">0</div>
+                    <div class="stat-label">Total Inventory</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-value">$0</div>
+                    <div class="stat-label">Inventory Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-avg">$0</div>
+                    <div class="stat-label">Average Price</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌾 Farm2Table - Seller Portal</h3>
+                    <p>Manage your farm products and reach customers easily.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Farm2Table. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="seller-dashboard.js"></script>
+</body>
+</html>
+

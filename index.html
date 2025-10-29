@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm2Table - Direct from Farm to Your Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🌾 Farm2Table</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Marketplace</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">🛒 Cart <span class="cart-count">0</span></a></li>
+                <li class="login-links"><a href="login.html" class="login-link">Login</a></li>
+                <li><a href="seller-login.html" class="seller-link" style="background: var(--primary-color); color: white; padding: 0.5rem 1.2rem; border-radius: 25px; text-decoration: none;">👨‍🌾 Sell Products</a></li>
+                <li class="user-links" style="display: none;">
+                    <a href="#" class="user-link">👤 <span class="user-name">User</span></a>
+                    <button class="btn-logout" style="background: none; border: none; color: var(--text-dark); cursor: pointer; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s;">
+                        Logout
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Fresh Direct from Farms</h1>
+            <p>Connect with local farmers. Buy the freshest produce directly from the source.</p>
+            <a href="products.html" class="btn btn-primary">Explore Marketplace</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-card">
+                <div class="farm-icon">🚜</div>
+                <h3>Farm Fresh</h3>
+                <p>Direct from the source</p>
+            </div>
+            <div class="hero-card">
+                <div class="farm-icon">🌱</div>
+                <h3>100% Organic</h3>
+                <p>Naturally grown</p>
+            </div>
+            <div class="hero-card">
+                <div class="farm-icon">💚</div>
+                <h3>Sustainable</h3>
+                <p>Support local farmers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Farm2Table?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Local & Fresh</h3>
+                    <p>All products come directly from local farms in your area, ensuring maximum freshness.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🌾</div>
+                    <h3>Direct from Farmers</h3>
+                    <p>Cut out the middleman and get better prices while supporting local agriculture.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Organic Options</h3>
+                    <p>Access to organic and sustainably grown produce with full transparency.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick delivery from farm to your door, maintaining quality and freshness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image vegetable"></div>
+                    <h3>Vegetables</h3>
+                    <p>Fresh seasonal vegetables</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image fruit"></div>
+                    <h3>Fruits</h3>
+                    <p>Sweet and juicy fruits</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image dairy"></div>
+                    <h3>Dairy</h3>
+                    <p>Fresh milk and cheese</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image grains"></div>
+                    <h3>Grains & Cereals</h3>
+                    <p>Organic grains and cereals</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image meat"></div>
+                    <h3>Meat & Poultry</h3>
+                    <p>Farm-raised and free-range</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-image eggs"></div>
+                    <h3>Eggs</h3>
+                    <p>Fresh farm eggs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Preview -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            <div class="view-all">
+                <a href="products.html" class="btn btn-secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Browse Products</h3>
+                    <p>Explore fresh produce from local farmers in your area</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Add to Cart</h3>
+                    <p>Select the products you want and add them to your cart</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Order & Pay</h3>
+                    <p>Complete your order with secure payment options</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Receive Fresh Goods</h3>
+                    <p>Get your order delivered fresh from the farm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌾 Farm2Table</h3>
+                    <p>Connecting farmers with consumers for fresh, local produce.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Marketplace</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Vegetables</a></li>
+                        <li><a href="#">Fruits</a></li>
+                        <li><a href="#">Dairy</a></li>
+                        <li><a href="#">Meat & Poultry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Email: info@farm2table.com</p>
+                    <p>Phone: 1-800-FARM-2-TABLE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Farm2Table. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
